@@ -1,0 +1,25 @@
+public class VerificarParImpar {
+    public static void main(String[] args) {
+        // Verificamos si el usuario escribió un número al ejecutar el programa
+        if (args.length == 0) {
+            System.out.println("Por favor, escribe un número al ejecutar el programa.");
+            System.out.println("Ejemplo: java VerificarParImpar 5");
+            return; // Terminamos el programa si no se escribió ningún número
+        }
+
+        // Convertimos el argumento que el usuario escribió (que es un texto) a número entero
+        int numero = Integer.parseInt(args[0]);
+
+        // Verificamos si el número es negativo
+        if (numero < 0) {
+            System.out.println("No se permiten números negativos.");
+        } else {
+            // Verificamos si el número es par o impar
+            if (numero % 2 == 0) {
+                System.out.println("El número " + numero + " es PAR.");
+            } else {
+                System.out.println("El número " + numero + " es IMPAR.");
+            }
+        }
+    }
+}
