@@ -1,0 +1,27 @@
+import java.util.Scanner; // Importamos Scanner para leer la entrada del usuario
+import java.util.Random;  // Importamos Random para generar un numero aleatorio
+
+public class AdivinaElNumero {
+    public static void main(String[] args) {
+        // Creamos un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Generamos un numero aleatorio entre 1 y 10
+        Random random = new Random();
+        int numeroSecreto = random.nextInt(10) + 1;
+
+        int intento; // Variable para almacenar el numero que ingresa el usuario
+
+        System.out.println("¡Adivina el numero entre 1 y 10!");
+
+        // Usamos un while para permitir multiples intentos hasta que acierte
+        do {
+            System.out.print("Introduce tu intento: ");
+            intento = scanner.nextInt();
+        } while (intento != numeroSecreto); // El bucle sigue hasta que el usuario acierte
+
+        System.out.println("Has adivinado el numero");
+
+        scanner.close(); // Cerramos el scanner despues de usarlo
+    }
+}
