@@ -1,0 +1,28 @@
+import java.util.Scanner; // Importamos Scanner para leer entradas del usuario
+
+public class ContadorWhile {
+    public static void main(String[] args) {
+        // Creamos un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedimos al usuario que ingrese un número positivo
+        System.out.print("Ingresa un número positivo: ");
+        int numero = scanner.nextInt();
+
+        // Verificamos si el número es positivo
+        if (numero <= 0) {
+            System.out.println("Solo se permiten números positivos.");
+            scanner.close(); // Cerramos el scanner
+            return; // Terminamos el programa si el número no es positivo
+        }
+
+        // Usamos un while para contar desde 1 hasta el número ingresado
+        int i = 1;
+        while (i <= numero) {
+            System.out.println(i); // Imprimimos el número actual
+            i++; // Aumentamos el contador
+        }
+
+        scanner.close(); // Cerramos el scanner después de usarlo
+    }
+}
